@@ -1,8 +1,9 @@
 import React from 'react';
+import './home.css'
 import Header from '../common/header'
 
 const Home = () => {
-  return <div>
+  return <div  >
        <Header />
          </div>
 }
