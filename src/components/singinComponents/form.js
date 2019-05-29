@@ -14,10 +14,10 @@ const Input = () => {
                            <div  className='col-xm-6'>
                               <label  className='' >Password</label>
                               <br />
-                              <input type="text" name=""    />
+                              <input type="password" name=""    />
                            </div>
                            <div className='row f1 justify-content-center'>
-                                               <button className=' btn btn-sm btn-primary' type='submit'> Submit</button>
+                                               <button className=' btn btn-sm  btn-outline-primary' type='submit'> Submit</button>
                                            </div>
 
                     </form>

@@ -6,7 +6,7 @@
 
 
  const SignIn = () => {
-       return <div className='a1 card container'>
+       return <div className='a1 card container jumbotron'>
                 <div className='row '>
                   <div className='col-sm-6'>
                     <Heading / >
