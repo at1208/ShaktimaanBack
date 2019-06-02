@@ -1,28 +1,28 @@
 import React from 'react';
 import './form.css'
+import { Field, reduxForm } from 'redux-form'
 
-const Input = () => {
-    return    <div className='container '>
-                 <div className='row justify-content-center '>
-                      <div className='col-xm-12'>
-                      <form>
-                           <div className='col-xm-6'>
-                              <label  className=''  >Username</label>
-                              <br />
-                              <input type="text" name=""    />
-                           </div>
-                           <div  className='col-xm-6'>
-                              <label  className='' >Password</label>
-                              <br />
-                              <input type="password" name=""    />
-                           </div>
-                           <div className='row f1 justify-content-center'>
-                                               <button className=' btn btn-sm  btn-outline-primary' type='submit'> Submit</button>
-                                           </div>
+const Input = (props) => {
 
-                    </form>
-                 </div>
-              </div>
+  const SignIn = (formprops) => {
+    return <div className='a3 container-fluid card row col-lg-8'>
+          <label className='a2'>{formprops.label}</label>
+          <input className=' ' onChange={formprops.input.onChange} value={formprops.input.value}/>
+          </div>
+  }
+
+  const onFormSubmit = (formValue) => {
+
+    return console.log(formValue)
+  }
+    return    <div className='a1 container card shadow text-center'>
+           <h1>Sign In</h1>
+       <form onSubmit={props.handleSubmit(onFormSubmit)}>
+           <Field name='Username'  label='UserName' component={SignIn}/>
+           <Field name='Password'   label='Password' component={SignIn}/>
+             <button type='submit' >Submit</button>
+      </form>
             </div>
+
         }
-export default Input;
+export default reduxForm({form:'Sign In' })(Input);

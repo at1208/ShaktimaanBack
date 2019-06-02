@@ -7,11 +7,15 @@ import MealList from './components/meallistComponents/meallist'
 import AddMeal from './components/addmealComponents/addmeal'
 import DeleteMeal from './components/deletemealComponents/deletemeal'
 import UpdateMeal from './components/updatemealComponents/updatemeal'
+import { Provider } from 'react-redux';
+import { createStore } from 'redux'
+import reducers from './reducers'
 
+const store = createStore(reducers)
 
-
-
-ReactDOM.render( <BrowserRouter>
+ReactDOM.render( <Provider store={store}>
+               <div>
+                 <BrowserRouter>
                   <div>
                     <Route path='/' exact component={SignIn} />
                     <Route path='/home' component={Home}/>
@@ -21,4 +25,6 @@ ReactDOM.render( <BrowserRouter>
                     <Route path='/home/updatemeal' component={UpdateMeal} />
                   </div>
                  </BrowserRouter>
+                 </div>
+                 </Provider>
                  ,document.getElementById('root'));

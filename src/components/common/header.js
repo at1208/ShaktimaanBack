@@ -5,26 +5,18 @@ import { Link } from 'react-router-dom'
 import SignOut from './signout'
 
 const Home = () => {
+  console.log()
   return (
-   <div className='x1 container-fluid card justify-contents-center'>
-       <div className='row justify-content-center container-fluid '>
-            <div className=' x2 col-lg-1'>
-               <Link to='/home/meallist' ><Meals name='Meals List' /></Link>
-            </div>
-            <div className='x2 col-lg-1'>
-               <Link to='/home/addmeal' ><Meals name='Add Meal' /></Link>
-            </div>
-            <div className='x2 col-lg-1'>
-            <Link to='/home/deletemeal' ><Meals name='Delete Meal' /></Link>
-            </div>
-            <div className='x2 col-lg-1'>
-              <Link to='/home/updatemeal' ><Meals name='Update Meal' /></Link>
-            </div>
-            <div className='x3 col-lg-1 '>
-              <Link to='/' > <SignOut /></Link>
-            </div>
-      </div>
+   <div className='jumbotron row justify-content-center'>
+   <Link to='/home'><Meals name='Home'/></Link>
+   <Link to='/home/meallist'><Meals name='Food List '/></Link>
+   <Link to='/home/addmeal'><Meals name='Add Food'/></Link>
+   <Link to='/home/deletemeal'><Meals name='Delete Food'/></Link>
+   <Link to='/home/updatemeal'><Meals name='Update Food'/></Link>
+   <Link to='/'><SignOut /></Link>
+
   </div>
   )
 }
 export default Home;
+//

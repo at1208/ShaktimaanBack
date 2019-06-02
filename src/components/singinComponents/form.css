@@ -1,3 +1,11 @@
-.f1{
-  margin-top: 10px;
+ .a1{
+   height: 600px;
+   width: 400px;
+ }
+.a2{
+  margin-right: 20px;
+}
+.a3{
+  margin-right: 35px;
+  margin-left: 60px;
 }
